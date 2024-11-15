@@ -26,18 +26,18 @@ Our vehicle clustering and tracking system employs a sophisticated DBSCAN (Densi
 The speed estimation module implements a sophisticated multi-step process that converts pixel-space measurements to real-world velocities. Our approach accounts for perspective distortion, camera calibration parameters, and temporal characteristics of the video stream to provide accurate speed measurements.
 
 ## Performance Optimization
- • Adaptive thresholding for varying conditions
- • Early termination of invalid tracks
- • Efficient data structures for track management
+ 1) Adaptive thresholding for varying conditions
+ 2) Early termination of invalid tracks
+ 3) Efficient data structures for track management
 
 # Results
 Our experimental evaluation demonstrates comprehensive performance analysis of both Shi-Tomasi and Harris corner detectors in the context of vehicle tracking and speed estimation.
 
 The experimental results highlight several important observations:
- • Corner Detection: Shi-Tomasi detector consistently identified more corners (499.7 vs 117.9), providing more tracking points but requiring additional computational resources.
- • Processing Efficiency: Harris detector demonstrated superior processing speed, requiring only 23.24ms compared to Shi-Tomasi’s 42.49ms, representing a 45.3% reduction in processing time.
- • Tracking Accuracy: Despite the significant difference in corner counts, both methods maintained comparable tracking accuracy, as evidenced by the similar speed measurements shown in Figure 3.
- • Real-time Performance: Both methods achieved real time processing capabilities, with frame rates exceeding 20 FPS (frames per second)
+1) Corner Detection: Shi-Tomasi detector consistently identified more corners (499.7 vs 117.9), providing more tracking points but requiring additional computational resources.
+2) Processing Efficiency: Harris detector demonstrated superior processing speed, requiring only 23.24ms compared to Shi-Tomasi’s 42.49ms, representing a 45.3% reduction in processing time.
+3) Tracking Accuracy: Despite the significant difference in corner counts, both methods maintained comparable tracking accuracy, as evidenced by the similar speed measurements shown in Figure 3.
+4) Real-time Performance: Both methods achieved real time processing capabilities, with frame rates exceeding 20 FPS (frames per second)
 
  ![demo](https://github.com/user-attachments/assets/a68e77d2-d804-44ee-af66-9e17fc5bdbc4)
  Side-by-side comparison of Shi-Tomasi (left) and Harris (right) corner detectors in real-time vehicle tracking. The image shows simultaneous tracking of multiple vehicles with their respective speeds (km/h). Note the difference in corner detection counts (380 vs 136) and processing times (36.5ms vs 19.7ms) between the two methods while maintaining similar tracking accuracy.
